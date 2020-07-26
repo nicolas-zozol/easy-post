@@ -22,6 +22,7 @@ router.post('/', function (req, res) {
     }
     object.data=data;
     object.date=new Date().toString()
+    object.headers = req.headers;
     res.status(201);
     res.json("created");
 });
